@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    height: 7vh;
+    background: #87ceeb;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav-link
+{
+    display: flex;
+    list-style: none;
+    width: 70%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;   
+}
+.nav-link li a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-link li a:hover, .nav-link li a:active
+{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+.part{
+    height: 50vh;
+    background-image: linear-gradient(to right, rgb(13, 33, 70), rgb(38, 53, 36), rgb(12, 67, 89));
+
+}
+.part .part1{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    color: skyblue;
+    font-size: 40px;
+    margin-left: auto;
+    justify-content: center;
+    animation-name: head;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+#part1_id{
+    animation-delay: 3s;
+}
+@keyframes head{
+    0% {font-size: 39px; opacity: 1;}
+	50% {font-size: 40px; opacity: 0;}
+    100% {font-size: 40px; opacity: 1;}
+}
+footer{
+    
+    background-image: linear-gradient(to right, rgb(13, 33, 70), rgb(38, 53, 36), rgb(12, 67, 89));
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 10%;
+}
+footer a{
+    color: rgb(13, 168, 91);
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 700px){
+    .part{
+        height: 30vh;
+    }
+   .line{
+       width: 30px;
+       height: 3px;
+       background: white;
+       margin: 6px;
+   }
+   nav{
+       position: fixed;
+   }
+
+   .bus{
+       position: absolute;
+       cursor: pointer;
+       right: 5%;
+       top: 60%;
+       transform: translate(-5%, -60%);
+       z-index: 1;
+   }
+   .nav-link
+   {
+       position: fixed;
+       background: skyblue;
+       height: 8%;
+       width: 100%;
+       flex-direction: column;
+       transition: all 0.43s ease-in;
+       pointer-events: none;
+   }
+   .nav-link.open{
+    pointer-events: all;
+    height: 30%;
+    padding-top: 30px;
+    }
+    .nav-link li{
+        opacity: 0;
+    }
+    .nav-link li a
+    {
+        font-size: 18px;
+    }
+    .nav-link li:nth-child(1){
+        transition: all 0.3s ease 0.2s; 
+    }
+    .nav-link li:nth-child(2){
+        transition: all 0.3s ease 0.2s; 
+    }
+    .nav-link li:nth-child(3){
+        transition: all 0.3s ease 0.2s; 
+    }
+    .nav-link li:nth-child(4){
+        transition: all 0.3s ease 0.2s; 
+    }
+    .nav-link li:nth-child(5){
+        transition: all 0.3s ease 0.2s; 
+    }
+    li.fade{
+        opacity: 1;
+    }
+}

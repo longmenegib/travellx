@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>{% block title %}{%endblock%}</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href="{% static 'css/base.css' %}">
+    {% block link %}{%endblock%}
+</head>
+<body>
+    <div class="fort">
+    <nav>
+        {% block nav %}
+        <div class="bus">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-link">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'agency' %}">Agency</a></li>
+            <li><a href="{% url 'ticket' %}">Book Ticket</a></li>
+            <li><a href="{% url 'register' %}">Contact</a></li>
+            <li><a href="{% url 'transaction' %}">Transactions</a></li>
+        </ul>
+    </nav>
+    </div>
+    {% endblock %}
+    <section class="part">
+        <div class="part1" id="part1_id">{% block section%}{%endblock%}</div>
+    </section>
+    {%block content%}
+    {%endblock%}
+    
+    <footer class="pied">
+        <div class="connect"> Stay connected with Travellx</div>
+        <br><p style="font-size: small;">Terms and Policy</p>
+        <p>{% if isloggin %}
+                <a href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                <a href="{% url 'loging' %}">Log In</a>
+                {% endif %}</p>
+        <br><p style="font-size: small;">&copy;copyright-2020 by travellx</p>
+    </footer>
+
+    <script src="{% static 'js/travellx_home.js' %}"></script>
+</body>    
+</html>

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{%load static%}
+
+{% block link %} <link rel="stylesheet" href="{% static 'css/login.css' %}"> {% endblock %}
+
+
+{% block section%}
+<p>Log in To Travellx</p>
+{%endblock%}
+
+{% block content%}
+<div class=".section_login">
+<div>
+    <form class="login" action="{% url 'loging' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="Username" required name="username"><br>
+        <input type="password" placeholder="password" name="password"><br>
+        <button id="submit_login" type="submit" value="submit">Login</button>
+    </form>
+</div>
+<div style="margin-left: 20px;">
+    Don't have an account?<a href="{% url 'signing' %}">Sign In</a>
+</div>
+</div>
+{% endblock%}

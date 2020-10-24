@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block link %} <link rel="stylesheet" href="{% static 'css/transaction.css' %}"> {% endblock %}
+
+{% block section%}
+<p>Transactions and bills</p>
+{%endblock%}
+
+{% block content%}
+<div class="transaction_title">
+    <center><h1>All your Transactions are here</h1></center>
+</div>
+<div>
+    <table style="width:100%">
+        <tr>
+          <th>ID Number or Name</th>
+          <th>Travelling From</th>
+          <th>To</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>{{userpro.id_number}}</td>
+          <td>{{userpro.source}}</td>
+          <td>{{userpro.destination}}</td>
+          <td>{{userpro.date}}</td>
+          <td>{{userpro.time}}</td>
+          <td>{% if status %}<span style="background-color: green; color: white;">paid </span>
+            {% else %}<span style="background-color: red; color: white;">Not Paid {% endif %}</span></td>
+        </tr>
+      </table>
+</div>
+<div class="payment">
+    <center><span>Payment method: </span><button> MOBILE MONEY</button></center>
+</div>
+{% endblock%}

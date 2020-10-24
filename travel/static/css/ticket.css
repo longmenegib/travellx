@@ -1,0 +1,42 @@
+form{
+    text-align: center;
+    z-index: inherit;
+    margin-top: 50px;
+    font-size: 30px;
+    width: 80%;
+    margin-left: 10%;
+    border: transparent;
+    background-color: wheat;
+    text-align: right;
+    padding-right: 20%;
+}
+form p{
+    margin: 30px 0px 30px 0px;
+}
+form p #source, form p #time, form p #destination, form p #id_number, form p #date{
+    width: 50%;
+    height: 5vh;
+    margin-left: 5px;
+}
+form #submit{
+    height: 6vh;
+    color: ivory;
+    background-color: lawngreen;
+    border-color: white;
+    width: 25%;
+    font-size: 50%;
+    font-weight: bold;
+    margin-right: 30%;
+}
+.message{
+    text-align: center;
+    color: red;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.message_red{
+    text-align: center;
+    color: red;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+}

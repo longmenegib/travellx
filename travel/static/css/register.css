@@ -1,0 +1,75 @@
+input, textarea{
+    height: 5vh;
+    margin-left: 20px;
+    border: solid 1px grey;
+}
+textarea{
+    height: 10vh;
+    width: 53%;
+}
+span{
+    color: red;
+}
+.all{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 8%;
+}
+.reg_form{
+    width: 130%;
+    margin-top: 10%;
+}
+.reg_form form p{
+    margin-bottom: 20px;
+}
+.contact_infos{
+    border-bottom: lightblue solid;
+}
+.infos_title{
+    font-size: xX-large;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30PX;;
+}
+.infos_one{
+    font-size: large;
+    margin-bottom: 15px;
+}
+.infos2{
+    color: gray;
+    margin-bottom: 10px;
+}
+.sub_reg{
+    background-color: honeydew;
+    margin-top: 15px;
+}
+.message{
+    text-align: center;
+    color: green;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 700px){
+    .all{
+        display: inline-flex;
+    }
+    .reg_form{
+        margin-left: 10%;
+        margin-top: auto;
+    }
+    textarea{
+        width: auto;
+    }
+    .contact_infos{
+        border-right: lightblue solid;
+        border-bottom: none;
+    }
+    form{
+        text-align: right;
+    }
+    input, textarea{
+        width: 70%;
+    }
+    
+}

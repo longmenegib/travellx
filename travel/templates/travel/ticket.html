@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block link %} <link rel="stylesheet" href="{% static 'css/ticket.css' %}"> {% endblock %}
+
+{% block section%}
+<p>Buy a Ticket</p>
+{%endblock%}
+
+{% block content%}
+<form method="POST" action="{% url 'ticket' %}">
+    {% csrf_token %}
+    <p><label for="source">FROM</label>
+        <select name="source" id="source">
+        <option value="select" disabled selected>select location</option>
+        <option value="bamenda">Bamenda</option>
+        <option value="douala">Douala</option>
+        <option value="yaounde">Yaounde</option>
+        <option value="buea">Buea</option>
+        <option value="bafoussam">Bafoussam</option>
+        <option value="ngaoundere">Ngaoundere</option>
+    </select></p>
+    <p><label for="destination">TO</label>
+        <select name="destination" id="destination">
+            <option value="select" disabled selected>select destination</option>
+            <option value="douala">Douala</option>
+            <option value="bamenda">Bamenda</option>
+            <option value="yaounde">Yaounde</option>
+            <option value="buea">Buea</option>
+            <option value="bafoussam">Bafoussam</option>
+            <option value="ngaoundere">Ngaoundere</option>
+        </select></p>
+    <p><label for="date">DATE</label>
+        <input type="date" name="date" id="date" required></p>
+        <!-- {{ form.as_p }} -->
+    <p><label for="time">TIME</label>
+    <select name="time" id="time">
+        <option value="morning">Morning</option>
+        <option value="evening">Evening</option>
+    </select></p>
+    <p><label for="id_number">ID</label>
+    <input type="text" name="id_number" id="id_number" placeholder="enter name or id number"></p>
+    <p><input type="hidden" value="{{user.id}}" name="user"></p>
+    <p><input type="submit" value="Book Now" id="submit"></p>
+</form>
+</div>
+
+{% endblock%}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block link %} <link rel="stylesheet" href="{% static 'css/register.css' %}"> {% endblock %}
+
+
+{% block section%}
+<p>CONTACT US</p>
+{%endblock%}
+
+{% block content%}
+<div class="message">{% if renvoi %}message sent successfully{% endif %}</div>
+<div class="all">
+<div class="contact_infos">
+    <p class="infos_title">Contact info</p>
+    <p class='infos_one'>Email us with any questions or inquiries or use our contact data. We would be happy to answer your questions.</p>
+    <p class="infos2">Travellx agency inc<br>
+        bamenda street 5,<br>
+        ntaghang quater</p>
+
+    <p class="infos2">Telephone: +237 680616443,<br>
+    FAX: +237 658066719<br>
+    E-mail : www.gibrillongmene@gmail.com</p>
+</div>
+<div class="reg_form">
+<form method="POST" action="{% url 'register' %}">
+    {% csrf_token %}
+    <p><label for="fullname">Name<span>*</span></label>
+        <input type="text" id="fullname" name="fullname" placeholder="travellx user" required="req"></p>
+    <p><label for="email">Email<span>*</span></label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com"></p>
+    <p><label for="message">Message<span>*</span></label>
+        <textarea id="message" name="message" placeholder="type your message here..." required="req"></textarea></p>
+    <p><input type="submit" value="Send Message" class="sub_reg"></p>
+</form>
+</div>
+</div>
+{% endblock%}

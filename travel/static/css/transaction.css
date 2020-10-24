@@ -1,0 +1,16 @@
+td{
+    text-align: center;
+}
+.transaction_title{
+    margin: 20px;
+}
+table {
+    width: 100%;
+    background-color: #f1f1c1;
+  }
+
+  .payment{
+      margin: 30px;
+      font-size: x-large;
+      font-weight: 700;
+  }

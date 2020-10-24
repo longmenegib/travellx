@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block link %} <link rel="stylesheet" href="{% static 'css/travel_home.css' %}"> {% endblock %}
+
+{% block section%}WE ARE TRAVELLX<span style="color: white;font-size: small;">we love travelling</span>{%endblock%}
+
+{% block content %}
+
+<div class="partie1">
+    <p class="safe">Have a safe journey with Travellx agency. Stay safe and Be safe with Travellx.
+        Your satisfaction is our priority.
+    </p>
+</div>
+<!-- <div class="search">
+    <p>SEARCH FOR CHEAP FLIGHT</p>
+</div> -->
+<div class="contain">
+<section class="section_1">
+    <div class="sec1">
+    <p class="titre_section">BUSES</p>
+    <p><img src="{% static 'images/bus2.jpg' %}" alt=""></p>
+    <p class="body_section">Book for a ticket and choose a destination for your next journey along with the dates.
+        Please also indicate if it is a simple or a go-and-return journey.<br>
+        <a href="{% url 'ticket' %}">Book a ticket</a>
+    </p>
+    </div>
+    <div class="sec2">
+    <p class="titre_section">HOTELS</p>
+    <p><img src="{% static 'images/hotel1.jpg' %}" alt=""></p>
+    <p class="body_section">
+        They are 5 stars Hotels around your destination. With travellx, visit the most beautiful places in cameroon
+        visit the beach and others places in cameroon.<br>
+        <a href="#" class="more">view more</a>
+    </p>
+    </div>  
+    <div class="sec2">
+        <p class="titre_section">BEACH</p>
+        <p><img src="{% static 'images/beach1.jpg' %}" alt=""></p>
+        <p class="body_section">
+            They are 5 stars Hotels around your destination. With travellx, visit the most beautiful places in cameroon
+            visit the beach and others places in cameroon.<br>
+            <a href="#" class="more">view more</a>
+        </p>
+        </div>  
+</section>
+</div>
+
+{% endblock %}
